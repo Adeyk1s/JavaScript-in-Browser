@@ -1,0 +1,140 @@
+/*FONTS*/
+/*Regular*/
+@font-face {
+  font-family: "TTLakes";
+  src: url("../font/TTLakes-Regular.ttf");
+}
+/*Bold*/
+@font-face {
+  font-family: "TTLakes-bold";
+  src: url("../font/TTLakes-Bold.ttf");
+}
+/*Normilize*/
+*,
+*::after,
+*:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  font-family: TTLakes;
+}
+
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1056px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*HEADER*/
+header {
+  background: linear-gradient(to right, #f8f8f8, #fff);
+  padding: 16px 0;
+}
+.header__title {
+  color: rgba(126, 126, 130, 1);
+  font-size: 16px;
+  font-family: "TTLakes";
+  text-transform: uppercase;
+}
+/*MAIN*/
+.main {
+  background: #f8f8f8;
+  padding-top: 16px;
+  overflow: hidden;
+}
+
+/*Swiper*/
+.swiper {
+  max-width: 768px;
+  height: 110px;
+  display: none;
+}
+.swiper-slide {
+  width: 256px;
+}
+
+.swiper-pagination-bullet-active {
+  background: #b5b6bc;
+}
+
+.brands {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(224px, 240px));
+  gap: 15px;
+  justify-items: center;
+}
+.brand__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #fff;
+  width: 240px;
+  max-height: 72px;
+
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+
+  padding: 16px;
+}
+
+.action-button {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ff3e79;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-more {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+/*MEDIA*/
+
+@media screen and (max-width: 1120px) {
+  .container {
+    padding: 0 16px;
+  }
+  .brand__item {
+    min-width: 224px;
+  }
+}
+@media screen and (max-width:1000px){
+    .brands {
+        grid-template-columns: repeat(3, minmax(224px,240px));
+        row-gap: 16px;
+        justify-content: space-evenly;
+    }
+  }
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 0 16px;
+  }
+  .swiper {
+    display: block;
+  }
+  .brands.high-resolution,
+  .show-more {
+    display: none;
+  }
+
+}
